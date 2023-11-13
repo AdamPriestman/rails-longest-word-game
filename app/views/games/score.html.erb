@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row no-gutters">
+    <h1>Result</h1>
+    <div class="col-8">
+      <% if @valid && @english %>
+        <%= "Congratulations #{@guess} is a valid English word!" %>
+      <% elsif @valid == false %>
+        <%= "Sorry but #{@guess} can't be built out of #{@letters}" %>
+      <% else %>
+          <%= "Sorry but #{@guess} is not a valid English word..." %>
+      <% end %>
+       <%= link_to "Play again", new_path, class: 'btn btn-primary'%>
+    </div>
+  </div>
+</div>
